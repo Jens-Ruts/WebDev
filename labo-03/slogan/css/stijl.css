@@ -1,0 +1,86 @@
+/* stijl.css - labo 3, slogan (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+  --color-text: #000;
+  --color-copy: #333;
+  --color-accent: #ffcc00;
+  --color-button-hover: #333;
+}
+
+/* === your rules === */
+body {
+  min-height: 100vh;
+  padding: clamp(100px, 27vh, 194px) 24px 48px;
+  color: var(--color-text);
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: clamp(44px, 5.3vw, 68px);
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+
+h2 span {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  isolation: isolate;
+}
+
+h2 span::after {
+  position: absolute;
+  z-index: -1;
+  right: -2%;
+  bottom: -0.12em;
+  left: -2%;
+  height: 0.42em;
+  border-bottom: 10px solid var(--color-accent);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-2deg);
+}
+
+p {
+  max-width: 650px;
+  margin: 26px auto 0;
+  color: var(--color-copy);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+a {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 0 24px;
+  border-radius: 16px;
+  color: #fff;
+  background: #000;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+a:hover,
+a:focus {
+  background-color: var(--color-button-hover);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 20vh;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}

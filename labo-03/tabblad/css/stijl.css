@@ -1,0 +1,39 @@
+/* stijl.css - labo 3, tabblad (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+  --color-background: #ff816f;
+  --color-tab: #ffd500;
+  --color-card: #fff;
+  --color-border: #000;
+}
+
+/* === your rules === */
+body {
+  min-height: 100vh;
+  padding: 5rem;
+  background-color: var(--color-background);
+  color: var(--color-border);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  width: 15rem;
+  padding: 1rem 2rem;
+  border: 0.25rem solid var(--color-border);
+  border-bottom: 0;
+  background-color: var(--color-tab);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h2 {
+  width: 35rem;
+  padding: 3rem 2rem;
+  border: 0.25rem solid var(--color-border);
+  background-color: var(--color-card);
+  box-shadow: 0.5rem 0.5rem 0 var(--color-border),
+    -0.5rem 0.5rem 0 var(--color-border);
+  font-size: 3rem;
+  line-height: 1.1;
+}
