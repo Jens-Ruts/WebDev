@@ -1,0 +1,43 @@
+/* stijl.css - labo 4, kolommen (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+  --kolom-een: #00ced1;
+  --kolom-twee: #9400d3;
+  --kolom-drie: #00bfff;
+}
+
+/* === your rules === */
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  gap: 4vw;
+  width: 92vw;
+  height: 80vh;
+  margin: 10vh auto;
+}
+
+main div {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font: bold 4rem Arial, sans-serif;
+}
+
+main div:nth-child(1) {
+  background-color: var(--kolom-een);
+}
+
+main div:nth-child(2) {
+  flex: 2;
+  background-color: var(--kolom-twee);
+}
+
+main div:nth-child(3) {
+  background-color: var(--kolom-drie);
+}
